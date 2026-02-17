@@ -57,3 +57,7 @@ Configured the Default Domain Policy to enforce an Account Lockout Policy across
 </p>
 <p>
 Verified that the configured Group Policy was successfully applied by triggering multiple failed login attempts. The user account was locked as expected, confirming proper policy enforcement and centralized domain management.
+
+<h2> Summary</h2>
+This lab demonstrates the ability to configure domain-wide security policies and validate their enforcement.
+
