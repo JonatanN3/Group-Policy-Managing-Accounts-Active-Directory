@@ -1,5 +1,5 @@
 # Group Policy Managing Accounts
-This tutorial is to show demonstrating account security enforcement using Group Policy in Windows Server.
+This tutorial is to demonstrate account security enforcement using Group Policy in Windows Server.
 
 <h2>Environments and Technologies Used</h2>
 
