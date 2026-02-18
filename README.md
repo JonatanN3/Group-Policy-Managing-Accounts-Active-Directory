@@ -23,11 +23,6 @@ This includes:
 - User account control
 - Policy configuration
 
-<h2>Overview of Group Policy</h2>
-
-- Group Policy allows administrators to centrally manage security settings, password and lockout policies, desktop restrictions, software deployment, and much more across all domain computers and users.
-- GPOs are linked to containers such as sites, domains, or Organizational Units (OUs). Once linked, the policies automatically apply to all objects (users/computers) within those containers.
-
 <h2>1. Group Policy Management Console Open</h2>
 
 <p>
@@ -54,7 +49,7 @@ Observed the existing Default Domain Policy. The Account Lockout Policy was not 
 <img <img width="1536" height="1024" alt="20 220 32 169 - Remote Desktop Connection 2_15_2026 12_44_25 AM" src="https://github.com/user-attachments/assets/90b5f9f9-2929-4466-b08a-e52b7fa6fd27" />
 </p>
 <p>
-Configured the Default Domain Policy to enforce an Account Lockout Policy across all domain users. The lockout threshold was set to 5 invalid logon attempts, with a lockout duration of 30 minutes and a reset counter of 10 minutes. Administrator account lockout was also enabled. This demonstrates implementation of centralized security controls to mitigate unauthorized access.
+Configured the Default Domain Policy to enforce an Account Lockout Policy across all domain users. The lockout threshold was set to 5 invalid logon attempts, with a lockout duration of 30 minutes and a reset counter of 10 minutes. Administrator account lockout was also enabled. This demonstrates the use of centralized security controls to mitigate unauthorized access.
 </p>
 <br />
 
