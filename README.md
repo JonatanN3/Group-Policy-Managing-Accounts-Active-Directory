@@ -1,6 +1,9 @@
 # Group Policy Managing Accounts
-This tutorial is to demonstrate account security enforcement using Group Policy in Windows Server.
-
+The purpose of this lab is to demonstrate how to use Group Policy Objects (GPOs) for managing user account security settings centrally across an Active Directory domain. 
+This includes:
+- Configuring account lockout policies to protect user accounts
+- Enforcing security settings across all users in the domain
+- Verifying that policies are applied correctly to user accounts
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -20,6 +23,11 @@ This tutorial is to demonstrate account security enforcement using Group Policy 
 - User account control
 - Policy configuration
 
+<h2>Overview of Group Policy</h2>
+
+- Group Policy allows administrators to centrally manage security settings, password and lockout policies, desktop restrictions, software deployment, and much more across all domain computers and users.
+- GPOs are linked to containers such as sites, domains, or Organizational Units (OUs). Once linked, the policies automatically apply to all objects (users/computers) within those containers.
+
 <h2>1. Group Policy Management Console Open</h2>
 
 <p>
@@ -36,7 +44,7 @@ Launched Group Policy Management Console (GPMC) to manage and configure domain-l
 <img <img width="1536" height="1024" alt="Remote Desktop Connection 2_15_2026 1_07_42 AM" src="https://github.com/user-attachments/assets/64a2b080-5c17-4998-98a8-6966a060b19b" />
 </p>
 <p>
-Observed that the Account Lockout Policy was not configured. The lockout threshold was set to 0 invalid logon attempts, meaning users could attempt unlimited failed logins. This represents the default security configuration and leaves the domain vulnerable to brute-force login attempts.
+Observed the existing Default Domain Policy. The Account Lockout Policy was not configured, the lockout threshold was set to 0 invalid logon attempts, meaning users could attempt unlimited failed logins. The Account Lockout Policy was not configured, leaving the domain vulnerable because users could attempt unlimited invalid logon attempts. 
 </p>
 <br />
 
@@ -56,8 +64,17 @@ Configured the Default Domain Policy to enforce an Account Lockout Policy across
 <img <img width="1536" height="982" alt="Screenshot (11)" src="https://github.com/user-attachments/assets/4989b1a5-793e-4156-bd3f-ad9d8c91a4e8" />
 </p>
 <p>
-Verified that the configured Group Policy was successfully applied by triggering multiple failed login attempts. The user account was locked as expected, confirming proper policy enforcement and centralized domain management.
+Verified that the configured Group Policy was successfully applied by triggering multiple failed login attempts. The user account was locked out as expected, confirming proper policy enforcement and centralized domain management.
+
+<h2></h2>
 
 <h2> Summary</h2>
-This lab demonstrates the ability to configure domain-wide security policies and validate their enforcement.
+This lab demonstrates the ability to configure domain-wide security policies and validate their enforcement. Security
+Implementing and testing Group Policy for account lockout and security settings which provides several advantages:
+
+✅ Centralized Security Enforcement – Consistent policy across all users and computers.
+
+✅ Protection Against Brute-Force Attacks – Lockout threshold stops repeated unauthorized access attempts.
+
+✅ Reduced Administrative Overhead – Manual adjustments on each machine are no longer needed; policies apply automatically.
 
